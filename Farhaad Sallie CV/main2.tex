@@ -1,0 +1,504 @@
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor} 
+%\documentclass[a4paper,10pt]{article}
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv} 
+% Change the page layout if you need to
+\geometry{left=0.5cm,right=0.5cm,top=1cm,bottom=1cm,columnsep=0.5cm} 
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{fontawesome}
+\usepackage{datetime}
+%\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{sectsty}
+\usepackage{multicol}
+\usepackage{adjustbox}
+\usepackage{xcolor} 
+%\pagenumbering{gobble}
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\parindent}{0pt} 
+\definecolor{ColorOne}{RGB}{46,178,255} % Blue 
+\definecolor{ColorTwo}{RGB}{0,90,145} % Mauve
+\definecolor{Chocolate}{RGB}{210,105,30} % Chocolate
+\definecolor{ForestGreen}{RGB}{34,139,34}
+\definecolor{Aqua}{RGB}{0,255,255}
+
+% Fork: Change the color codes to test your personal variant on any mode
+\ifdarkmode%
+  \definecolor{PrimaryColor}{HTML}{0F52D9}
+  \definecolor{SecondaryColor}{HTML}{3F7FFF}
+  \definecolor{ThirdColor}{HTML}{F3890B}
+  \definecolor{BodyColor}{HTML}{ABABAB}
+  \definecolor{EmphasisColor}{HTML}{ABA2A2}
+  \definecolor{BackgroundColor}{HTML}{242424}
+\else%
+  \definecolor{PrimaryColor}{HTML}{001F5A}
+  \definecolor{SecondaryColor}{HTML}{0039AC}
+  \definecolor{ThirdColor}{HTML}{F3890B}
+  \definecolor{BodyColor}{HTML}{666666}
+  \definecolor{EmphasisColor}{HTML}{2E2E2E}
+  \definecolor{BackgroundColor}{HTML}{E2E2E2}
+\fi%
+
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{PrimaryColor}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{ThirdColor}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{SecondaryColor}
+\colorlet{emphasis}{EmphasisColor}
+\colorlet{body}{BodyColor}
+\pagecolor{BackgroundColor} 
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries} 
+% Change the bullets for itemize and rating marker for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle} 
+\sectionfont{\color{ColorOne}}
+\subsectionfont{\color{ColorOne}} 
+\newcommand{\MyVerticalRule}{
+		\textcolor{ColorOne}
+		{
+		  \rule
+		  	{1pt}
+		  	{\textheight}
+		}
+	} 
+\newcommand{\LastUpdate}{
+		\vfill
+		\centering
+		\small
+		\textcolor
+			{ColorOne}
+			{Last updated: \monthname,~\the\year.}
+	} 
+\newcommand{\MySkip} {
+		\vskip 
+		12pt
+	} 
+\newcommand{\myhref}[2]{
+		\href{#1}
+		{\textcolor{ColorTwo}{#2}}
+	}
+%------------------------------------------------------------------------------------------
+% Format Skill Bullets
+%------------------------------------------------------------------------------------------
+\newcommand{\SkillBull}[1]{\textcolor{ColorTwo}{#1}}
+
+%\usepackage[vmargin=1.5cm, hmargin=1.5cm]{geometry}
+% \input{setup}
+%-------------------------------------------------------------------------------------------------------
+\begin{document}
+
+%-----Page 1 ----%
+    \thispagestyle{empty}
+    %-------------------------------------------------------------------------------------------------------
+    % Left column
+    %-------------------------------------------------------------------------------------------------------%
+    \begin{adjustbox}{valign=t} 
+    \begin{minipage}{0.3\textwidth}
+        \begin{center}
+            \begin{tikzpicture}
+            	\clip (0,0) circle (2cm) node {\includegraphics[width=4cm]{me.jpeg}};
+            \end{tikzpicture}
+            \MySkip
+            %----------------------------------------------------
+            {\LARGE \bfseries Farhaad Sallie}
+            \MySkip 
+            Born on August 15th, 1998\\
+            Cape Town, South Africa\\ 
+            \MySkip 	% See MySetup.tex file
+            \textcolor{ColorTwo}{\faMobile} 
+            \myhref{tel:+27833412846}
+            {+27 83 3412846} \\
+            \textcolor{ColorTwo}{\faEnvelopeO} 
+            \myhref{mailto:farhaads@outlook.com}
+            {farhaads@outlook.com} \\
+            \textcolor{ColorTwo}{\faChain} 
+            \myhref{https://www.farhaad-sallie.com/}{https://farhaad-sallie.com/} \\
+             \myhref{mailto:farhaads@outlook.com}{\faIcon{envelope}}     
+            %-\myhref{https://github.com/Rudo-Janse-van-Rensburg-69}{\faicon{github}} 
+            \myhref{https://www.linkedin.com/in/farhaad-sallie/}{\faicon{linkedin}} 
+            %----------------------------------------------------
+        \end{center}
+        \vfill
+        %----------------------------------------------------
+        \vspace{-10mm}\section*{Certifications}
+            
+            \textcolor{ColorOne}{$\circ$} Microsoft Certified Solutions \newline Associate: Web Applications\\
+            \begin{center}
+            {\includegraphics[width=3cm]{Assets/Cert Badges/Microsoft_MCSA-Web_Applications.png}}\\
+            \end{center}
+            \textcolor{ColorOne}{$\circ$} Programming in C\#\\
+            \begin{center}
+            {\includegraphics[width=3cm]{Assets/Cert Badges/Microsoft_Programming_in_C.png}}\\
+            \end{center}
+            \textcolor{ColorOne}{$\circ$} Developing ASP.Net MVC Web Applications\\ 
+            \begin{center}
+            {\includegraphics[width=3cm]{Assets/Cert Badges/Microsoft_Developing_ASP.NET_MVC.png}}\\
+            \end{center}
+            %-next mini page -%
+            
+            \vfill
+        
+        
+         
+        %----------------------------------------------------
+        %----------------------------------------------------  
+    \end{minipage}  
+    \end{adjustbox} 
+    \begin{adjustbox}{valign=t}
+        \begin{minipage}{0.05\textwidth} % Adapt width to your convenience
+        \MyVerticalRule  
+        \end{minipage}
+    \end{adjustbox} 
+    \begin{adjustbox}{valign=t}
+        \begin{minipage}{0.6\textwidth}
+            \section*{Current Job Description}
+                \begin{description}
+                
+                
+                \item[\normalfont \textcolor{ColorOne}{\textit{Junior Software Engineer - Blockkoin Exchange Ltd, Cape Town}}]\break
+                \break
+                \item[\normalfont {May. 2021 -- Ongoing}]\break
+                \break
+                  \item[\normalfont\textbf{Responsibilities included:}]\hfill
+                  \break
+                   \textcolor{ColorOne}{$\circ$} Collaborating with internal clients  (sales, accounting and analysts) and external stakeholders (private clients, payment solution providers, white-label solution and support providers and other exchanges) to develop integrated technical solutions to complex business problems in the cryptocurrency value chain.\hfill\break
+					\textcolor{ColorOne}{$\circ$} Leveraging \underline{{\textbf{Agile}}} Software Development Methodologies such as \underline{\textbf{Kanban}} in \underline{\textbf{Jira}} to facilitate the expansion of the capabilities of the exchange in \newline conjunction with internal and external solution providers.\hfill\break
+					\textcolor{ColorOne}{$\circ$} Implementing \underline{\textbf{Debian}}-based Cryptocurrency ATMs \href{https://lamassu.is/product/sintra}{(Lamassu Sintra)} which communicates with an \underline{\textbf{Ubuntu}}-based Server Droplet on Digital Ocean. \hfill\break
+                    \textcolor{ColorOne}{$\circ$} Managing accounts and security within the \underline{\textbf{Microsoft Office 365 Suite}} as an Account Administrator.\hfill\break
+                    \textcolor{ColorOne}{$\circ$} Maintaining and ensuring the availability and reliability of the Blockkoin exchange.\hfill\break
+                    \textcolor{ColorOne}{$\circ$} Integrating Ecommerce and new payment methods (Stripe, Paypal, \newline Flexepin, PaynetEasy and Bridgerpay) with \underline{\textbf{CRM}} systems by means of \newline various \underline{\textbf{API technologies}}. \hfill\break
+					\textcolor{ColorOne}{$\circ$}  \underline{\textbf{Full-stack Development}} (Front-end design, \underline{\textbf{NodeJS}} and \underline{\textbf{VeloJS}} \newline back-end); implementing iframes withing the exchange (\underline{\textbf{Laravel}} and \underline{\textbf{PHP}}) as well as hosting for Blockkoin and Blockkoin subsidiary websites. \hfill\break
+                    \textcolor{ColorOne}{$\circ$} Engineering several financial and marketing utilities (\underline{\textbf{JavaScript}} and \underline{\textbf{Python}}); Developed investment calculator to compare fees and prices with competitors and quoting for Over-The-Counter Crypto transactions. \hfill\break
+                  	 \textcolor{ColorOne}{$\circ$} Implementing  \underline{\textbf{branching strategies and version control}} of applications with \underline{\textbf{GitHub}}.\hfill\break
+                     \textcolor{ColorOne}{$\circ$} Creating \underline{\textbf{normalised SQL databases}} for efficient and reliable data \newline storage and retrieval.\hfill\break
+                    \textcolor{ColorOne}{$\circ$} Deploying Exchange mobile applications on \underline{\textbf{Apple TestFlight}} (iOS) and \underline{\textbf{Google Play Console}} (Android).\hfill\break
+                    \textcolor{ColorOne}{$\circ$} Creating UI and UX prototypes in \underline{\textbf{Adobe XD}} and editing brand assets in \underline{\textbf{Adobe Photoshop}}.\hfill\break
+                    \textcolor{ColorOne}{$\circ$} Operating in a position of high trust, with privileged access to \underline{\textbf{Fireblocks}} (to ensure alignment of vault balances with accounting software)\hfill\break
+                \end{description} 
+
+        \end{minipage}
+    \end{adjustbox}
+    
+    %-----page 2 -------%
+    \newpage
+    \thispagestyle{empty}
+    \begin{adjustbox}{valign=t}
+    \begin{minipage}{0.3\textwidth}
+        %---continue certs here -%
+        \textcolor{ColorOne}{$\circ$} Programming in HTML5, CSS3 and JavaScript\\
+            \begin{center}
+            {\includegraphics[width=3cm]{Assets/Cert Badges/Microsoft_Programming_in_HTML5_with_JavaScript.png}}\\
+            \end{center}
+            \textcolor{ColorOne}{$\circ$} Comp-Tia Certified IT Operations Specialist \\
+            \begin{center}
+            {\includegraphics[width=3cm]{Assets/Cert Badges/CompTIA_CIOS.png}}\\
+            \end{center}
+            \textcolor{ColorOne}{$\circ$} Comp-Tia A+\\
+            \begin{center}
+            {\includegraphics[width=3cm]{Assets/Cert Badges/CompTIA_A+.png}}\\
+            \end{center}
+            \textcolor{ColorOne}{$\circ$} Comp-Tia Network+\\
+            \begin{center}
+            {\includegraphics[width=3cm]{Assets/Cert Badges/CompTIA_Network+.png}}\\
+            \end{center}
+            
+            \section*{Interests} 
+            \textcolor{ColorOne}{$\circ$} Metacognition \\
+            \textcolor{ColorOne}{$\circ$} Music \\
+            \textcolor{ColorOne}{$\circ$} Guitar \\
+            \textcolor{ColorOne}{$\circ$} Community Involvement \\
+            \textcolor{ColorOne}{$\circ$} Gaming \\
+            \textcolor{ColorOne}{$\circ$} Aviation \\
+            \textcolor{ColorOne}{$\circ$} Car enthusiast \\
+    \end{minipage} 
+    \end{adjustbox}
+    \begin{adjustbox}{valign=t}
+        \begin{minipage}{0.05\textwidth} % Adapt width to your convenience
+        \MyVerticalRule  
+        \end{minipage}
+    \end{adjustbox} 
+    \begin{adjustbox}{valign=t}
+        \begin{minipage}{0.6\textwidth}
+            %---------------------------------------------------- 
+            \MySkip
+            \section*{Experience}
+                \begin{description}
+                    	
+\item[\normalfont \textcolor{ColorOne}{\textit{Engineer Intern - Mott MacDonald Africa, Johannesburg}}] \break
+                 \item[\normalfont {Nov. 2019 -- Jan. 2018}]\break
+                  \item[\textbf{Responsibilities included:}]
+                 \hfill\break
+                           \textcolor{ColorOne}{$\circ$} Providing Engineering Design Services for the \href{https://www.mottmac.com/article/40105/islands-build-bridges-through-sport}\textit{Multi-sport Complex} \newline associated with the Indian Ocean Games held in Mauritius\\
+                           
+                        \end{description}
+\begin{description}
+\textcolor{ColorOne}{$\circ$} Utilizing the South African National Standard lighting standards to model
+and simulate appropriate lighting for medical and recreational construction
+projects using \underline{\textbf{Relux Pro}} and \underline{\textbf{Auto-CAD}} Software\hfill\break
+\textcolor{ColorOne}{$\circ$}  \underline{\textbf{Project planning, designing and development}} through assisting in electrical infrastructure in projects.\hfill\break
+\textcolor{ColorOne}{$\circ$} Assisting in professional report writing to clients.\hfill\break
+\textcolor{ColorOne}{$\circ$} Practice of communication in a professional setting in form of writing
+emails, reports, participating in meetings and direct correspondence with
+international clients\hfill\break
+\textcolor{ColorOne}{$\circ$} Practice of engineering design\hfill\break
+\textcolor{ColorOne}{$\circ$} Working knowledge of design software such as  \underline{\textbf{Auto-CAD}} and  \underline{\textbf{Relux Pro}}\hfill\break
+\end{description}
+\begin{description}
+\vspace{-5mm} \item[\normalfont \textcolor{ColorOne}{Intern - Dr. Gareth A Fray General Practitioners, East London}]\break
+                \break
+                \item[\normalfont {Nov. 2015 -- Jan. 2016}]\break
+                \break
+                  \item[\normalfont\textbf{Responsibilities included:}]\hfill \break
+\textcolor{ColorOne} {$\circ$} Managing patient information through \textbf{Database operations}}.\hfill\break
+\textbf{Skills Acquired:}\hfill\break
+\textcolor{ColorOne} {$\circ$} Assisting in scheduling patient appointments via the patient CRM.\hfill\break
+\textcolor{ColorOne}{$\circ$} First aid experience through first-hand application of first aid theory.\hfill\break
+\end{description}
+           \vspace{-10mm} \section*{Education}
+                \normalfont \textcolor{ColorOne}{Mar. 2022 -- Ongoing} \newline
+                    	\textbf{BSc. Computer Science}\\ \medskip 
+                    	\textit{\myhref{https://www.unisa.ac.za//}{University of South Africa}}\hfill \break 
+                    	\begin{description}
+                          \vspace{-5mm} \textcolor{ColorOne}{$\circ$} Graduating by December 2023\hfill \break
+                           \textbf{Skills Acquired:}\hfill \break
+                           \textcolor{ColorOne}{$\circ$} C++ proficiency\hfill \break
+                           \textcolor{ColorOne}{$\circ$} Memory management\hfill \break
+                           \textcolor{ColorOne}{$\circ$} Data Structures\hfill \break
+                           \textcolor{ColorOne}{$\circ$} Turing Mathematics\hfill \break
+                           \textcolor{ColorOne}{$\circ$} Mathematical Induction\hfill \break
+                           \textcolor{ColorOne}{$\circ$} UX and UI Development\hfill \break 
+                           \textcolor{ColorOne}{$\circ$} Project management\hfill \break
+                        \end{description}
+
+              
+            \vfill
+        \end{minipage}
+    \end{adjustbox}  
+    
+    
+      %------page 3------%
+    \newpage
+    \thispagestyle{empty}
+    \begin{adjustbox}{valign=t}
+    \begin{minipage}{0.3\textwidth}
+       \section*{Education}
+            \begin{description}
+            	
+                \item [\normalfont \textcolor{ColorOne}{Current.}] \textbf{BSc Computer Science}\\
+            	University of South Africa
+            	\item [\normalfont \textcolor{ColorOne}{2022.}] \textbf{International  Diploma in \newline IT Systems}\\
+            	Academic Institute of Excellence 
+            	\item [\normalfont \textcolor{ColorOne}{2021.}] \textbf{NC: IT Systems \\Developer NQF5}\\
+            	Academic Institute of Excellence 
+            	\item [\normalfont \textcolor{ColorOne}{2016.}] \textbf{National Senior \\Certificate}\\ 
+            	Durban High School  
+            \end{description}  
+        \section*{Skills}
+            \begin{tabular}{ll}
+            	Concept Development \	\\ \SkillBull{$\bullet \bullet \bullet \bullet \circ$} \\
+            	Systems and Visual Thinking	        \\ \SkillBull{$\bullet \bullet \bullet \bullet \circ$} \\
+            	Mathematical Modelling  \\ \SkillBull{$\bullet \bullet \bullet \bullet \circ$} \\
+            \end{tabular}
+        \section*{Technology}
+            \begin{tabular}{ll}
+            	ASP.NET 		& \SkillBull{$\bullet \bullet \bullet \circ \circ$} \\
+            	C\#              & \SkillBull{$\bullet \bullet \bullet \circ \circ$} \\
+            	Git 			& \SkillBull{$\bullet \bullet \bullet \circ \circ$} \\
+            	HTML5 \& CSS3 		& \SkillBull{$\bullet \bullet \bullet \bullet \circ$} \\
+        	    Java     	    & \SkillBull{$\bullet \bullet \bullet \circ \circ$} \\
+        	    JavaScript      & \SkillBull{$\bullet \bullet \bullet \circ \circ$} \\
+            	Microsoft Azure & \SkillBull{$\bullet \bullet \circ \circ \circ$} \\ 
+            	AngularJS       & \SkillBull{$\bullet \bullet \bullet \circ \circ$} \\
+    		    ReactJS         & \SkillBull{$\bullet \bullet \bullet \circ \circ$} \\
+    		    MongoDB         & \SkillBull{$\bullet \bullet \bullet \circ \circ$} \\
+            	Python          & \SkillBull{$\bullet \bullet \bullet \circ \circ$} \\ 
+            	SQL             & \SkillBull{$\bullet \bullet \bullet \circ \circ$} \\
+    		    C++         & \SkillBull{$\bullet \bullet \bullet \circ \circ$} \\
+                PHP (Laravel)         & \SkillBull{$\bullet \bullet \bullet \circ \circ$} \\
+            \end{tabular}
+        \section*{Spoken Languages}
+            \begin{tabular}{ll}
+            	%English		& \SkillBull{$\bullet \bullet \bullet \, \circ$}\\
+            	English		& \SkillBull{$\bullet \bullet \bullet \bullet \bullet$}\\
+            	Afrikaans   & \SkillBull{$\bullet \bullet \bullet \circ \circ$}\\
+            	%French 		& \SkillBull{$\bullet \circ \circ \, \circ$}\\
+            \end{tabular}
+
+
+%----------------------------------------------------
+        
+            \vfill
+    \end{minipage} 
+    \end{adjustbox}
+    \begin{adjustbox}{valign=t}
+        \begin{minipage}{0.05\textwidth} % Adapt width to your convenience
+        \MyVerticalRule  
+        \end{minipage}
+    \end{adjustbox} 
+    \begin{adjustbox}{valign=t}
+        \begin{minipage}{0.6\textwidth}
+            
+            %---------------------------------------------------- 
+            \MySkip
+            
+             \vspace{-8mm} \normalfont \textcolor{ColorOne}{Dec. 2019 -- Dec. 2021.}
+                    \newline \textbf{International Diploma in IT Support and Development}\\ \medskip 
+                    	\textit{\myhref{https://aie.ac/tcp-2_30_499-full-stack-web-and-software-developer-nc-it-systems-developer-nqf5.html}{Academic Institute of Excellence}     }\\ 
+                    	\begin{small}
+                           \textbf{Subjects Covered:}\\
+									\textcolor{ColorOne}{$\circ$} Database Fundamentals\\
+									\textcolor{ColorOne}{$\circ$} Professional Development\\
+									\textcolor{ColorOne}{$\circ$} Software Development\\
+									\textcolor{ColorOne}{$\circ$} Web Development Fundamentals\\
+									
+									
+                        \end{small}
+            \textbf{Specialty Subjects Covered:}\\
+									\textcolor{ColorOne}{$\circ$} Data Science Fundamentals\\
+									\textcolor{ColorOne}{$\circ$} Machine Learning\\
+									\textcolor{ColorOne}{$\circ$} Applied Artificial Intelligence: Speech, Language and Search Engine
+									\newline Optimization\\
+									\textbf{Skills Acquired:}\\
+									\textcolor{ColorOne}{$\circ$} Proficiency in \underline{\textbf{C\# and JavaScript}.}\\
+            \textcolor{ColorOne}{$\circ$} Knowledgeable on \underline{\textbf{web development}} such as \underline{\textbf{website creation, design, hosting and deployment}}\\
+									\textcolor{ColorOne}{$\circ$} Working knowledge on creation, deployment and management of \underline{\textbf{SQL databases}} and \underline{\textbf{NoSQL Databases}}\\
+									\textcolor{ColorOne}{$\circ$} Knowledgeable on \underline{\textbf{creation, deployment and management}} of web
+									applications in \underline{\textbf{ASP.NET MVC}} and \underline{\textbf{Microsoft Azure}}.\\
+            \textcolor{ColorOne}{Mar. 2017 -- Dec. 2019.}  \newline
+            			{\textbf{BSc.Eng Mechatronic Engineering*}}\\ \medskip 
+                    	\textit{\myhref{https://www.uct.ac.za/}{University of Cape Town}     }
+          \begin{description}
+              
+                          \textcolor{ColorOne}{$\circ$} *Completed 120 Credits towards a BSc.Eng Mechatronic Engineering \hfill\break  
+                         \textbf{  Subjects Covered:}\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Calculus\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Computer Science\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Statistics\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Electrical Engineering\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Professional Communication\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Project Management\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Physics\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Engineering design\hfill\break
+								\textbf{Skills acquired:}\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Applicable knowledge in using \underline{\textbf{Microsoft Excel and R}} for \underline{\textbf{data analysis, data quantization and visualization.}}\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Coding languages: \underline{\textbf{Python, C\#, Java and R}}\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Design and Information visualization\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Proficiency with \underline{\textbf{Solidworks, Jupyter Notebook and Altium.}}\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} 3D modelling\hfill\break
+ 								\textcolor{ColorOne}{$\circ$} Time management\hfill\break
+          						\textcolor{ColorOne}{$\circ$} Improved teamwork and synergy via integration with the project cycle\hfill\break
+                        \end{description}
+                        
+        \end{minipage}
+    \end{adjustbox}
+    
+    %------page 4------%
+    \newpage
+    \thispagestyle{empty}
+    \begin{adjustbox}{valign=t}
+    \begin{minipage}{0.3\textwidth}
+       \section*{
+My Values}
+            \begin{description}
+                \item [\normalfont \textcolor{ColorOne}{$\circ$}] \textbf{Commitment}\\
+            	\item [\normalfont \textcolor{ColorOne}{$\circ$}] \textbf{Honesty}\\
+                \item [\normalfont \textcolor{ColorOne}{$\circ$}] \textbf{Adaptability}\\
+                \item [\normalfont \textcolor{ColorOne}{$\circ$}] \textbf{Teamwork}\\
+                \item [\normalfont \textcolor{ColorOne}{$\circ$}] \textbf{Integrity}\\
+            	
+            \end{description}
+        \section*{Additional Courses}
+            \begin{description}
+                \item [\normalfont \textcolor{ColorOne}{$\circ$}] \normalfont \myhref{https://www.udemy.com/course/the-web-developer-bootcamp/}{The Web Developer Bootcamp 2022 \\- Colt Steele}\\
+            	\item [\normalfont \textcolor{ColorOne}{$\circ$}] \normalfont\myhref{https://www.udemy.com/course/ultimate-photoshop-training-from-beginner-to-pro/}{Ultimate Adobe Photoshop Training \\- Cristian Doru Barin}\\
+                \item [\normalfont \textcolor{ColorOne}{$\circ$}] \normalfont \myhref{https://www.udemy.com/course/artificial-intelligence-az/} {Artificial Intelligence A-Z \\- Hadelin de Ponteves}\\
+                \item [\normalfont \textcolor{ColorOne}{$\circ$}] \normalfont \myhref{https://www.udemy.com/course/draft/2215346/}{Coding with NodeJS 2021 \\- Ian Schoonover}\\
+                \item [\normalfont \textcolor{ColorOne}{$\circ$}] \normalfont \myhref{https://stjohn.org.za/what-is-first-aid/}{Level 1 First Aid Certification\\ - St Johns Ambulance}\\
+            	
+            \end{description}  
+
+%----------------------------------------------------
+        
+            \vfill
+    \end{minipage} 
+    \end{adjustbox}
+    \begin{adjustbox}{valign=t}
+        \begin{minipage}{0.05\textwidth} % Adapt width to your convenience
+        \MyVerticalRule  
+        \end{minipage}
+    \end{adjustbox} 
+    \begin{adjustbox}{valign=t}
+        \begin{minipage}{0.6\textwidth}
+            
+            %---------------------------------------------------- 
+            \MySkip
+            \textcolor{ColorOne}{Jan. 2012 -- Dec. 2016.} \newline
+                    	{\textbf{National Senior Certificate}}\\ \medskip 
+                    	\textit{\myhref{https://www.durbanhighschool.co.za/}{Durban High School}     }\\ 
+                    	\begin{description}
+                         {\textbf{Key Subject Choices}:}\hfill\break
+                                \textcolor{ColorOne}{$\circ$}  Mathematics\hfill\break
+                                \textcolor{ColorOne}{$\circ$}  Physics\hfill\break
+                                \textcolor{ColorOne}{$\circ$}  Life Science\hfill\break
+                                \textcolor{ColorOne}{$\circ$}  Information Technology\hfill\break  
+                         
+            {\textbf{Leadership positions}:}\hfill\break
+                                \textcolor{ColorOne}{$\circ$}  First Aid Team Captain (2015-2016)\hfill\break
+                                \textcolor{ColorOne}{$\circ$}  Full Sport Colours for First aid (2016)\hfill\break
+                                \textcolor{ColorOne}{$\circ$}  Academic and Leadership Mentor (2014)\hfill\break
+                                \textcolor{ColorOne}{$\circ$}  Class Captain (2013-2016)\hfill\break
+                                \textcolor{ColorOne}{$\circ$}  Interact Outreach Committee Secretary (2013-2015)\hfill\break
+                             \end{description}
+                             
+            \vspace{-10mm}\section*{Community Service}
+            
+                 \item[\normalfont \textcolor{ColorOne}{2018 --2019.}] 
+                    	\textbf{Volunteer at FD Project South Africa}\\ \medskip 
+                    	\textit{\myhref{https://mobile.twitter.com/fdprojectsa}{FD Project South Africa}     }\\ 
+                    	\begin{description}
+                            While assisting here, we had prepared and distributed large amounts of food as a team in underprivileged areas in Cape Town. 
+                        \end{description}
+                    \item[\normalfont \textcolor{ColorOne}{2017.}] 
+                    	\textbf{Member of Engineers without Borders UCT}\\ \medskip 
+                    	\textit{\myhref{https://https://www.facebook.com/EWBUCT/}{University of Cape Town}}\\ 
+                    	\begin{description}
+                            We ran a feasibility project pertaining to using \underline{\textbf{Raspberry Pis}} as IT infrastructure for students as a medium to teach subject of Information  Technology and educate students in \underline{\textbf{IoT}} in underprivileged high schools in  Cape Town.
+                        \end{description}
+            \vspace{-5mm}\section*{References}
+                \begin{description} 
+                    \item
+                    	\textbf{Lara Holland} \\
+                       \textcolor{ColorTwo}{\textit{HoD for Marketing and Content at Blockkoin Exchange Ltd}}\\ 
+                	    \url{Lara.Holland@blockkoin.io} | $+2782-769-2761$ 
+                    \item
+                        \textbf{Earl Clarke} \\ 
+                        \textcolor{ColorTwo}{\textit{Senior Account Manager at Blockkoin Exchange Ltd}}\\ 
+                	    \url{Earl.Clarke@blockkoin.io} | $+2784-771-4376$ 
+                	\item
+                        \textbf{Faiez Sallie}\\ 
+                        \textcolor{ColorTwo}{\textit{Global Energy Practice Leader for Oil and Gas, Emerging Fuels Leader North America at Mott Macdonald}}\\ 
+                	    \url{Faiez.Sallie@mottmac.com} | $+2783-800-0070$ 
+                	\item
+                        \textbf{Rudo Janse van Rensburg}\\ 
+                        \textcolor{ColorTwo}{\textit{Data Engineer at Synthesis Software Technologies}}\\ 
+                	    \url{Rudo-jvr@tutanota.com} | $+2771-612-5820$ 
+                \end{description}
+            \vfill
+            \LastUpdate
+        \end{minipage}
+    \end{adjustbox}  
+\end{document}
+
