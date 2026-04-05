@@ -1,0 +1,208 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Curriculum Vitae Timeline/CV
+% LaTeX Template
+% Version 1.0 (5/23/19)
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com) and finally by
+% Augusto Cunha (contact@augustoicaro.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper]{twentysecondcv} % a4paper or latterpaper
+\usepackage{anyfontsize}
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\profilepic{me.png} % Profile picture
+
+\cvname{Farhaad Sallie} % Your name
+\cvjobtitle{Software \& Data Engineer} % Job title/career
+
+\cvdate{} % Date of birth
+\cvaddress{Cape Town, South Africa} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{+27 833412846} % Phone number
+\cvsite{} % Personal website
+\cvmail{farhaads@outlook.com} % Email address
+\cvgithub{}
+\cvlinkedin{farhaad-sallie} % Linkedin user account
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 Profile
+%----------------------------------------------------------------------------------------
+
+\profile{Profile}{Software engineer with 4+ years of experience in fintech, working across backend development, data engineering, and cloud infrastructure. Built and maintained ETL pipelines, billing workflows, and production services using Python, Go, Rust, SQL, AWS, Terraform, Kubernetes, and BigQuery. Strongest in practical delivery, system reliability, and data-intensive operational work.} % To have no About Me section, just remove all the text and leave \aboutme{}
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT ME
+%----------------------------------------------------------------------------------------
+
+%\aboutme{About Me}{Extensive background in computer graphics for the petroleum industry using applied mathematics. Areas of interest include Functional Programming Languages, Computational Origami, Application Development Using Open Source Tools, Computer Graphics, Image Processing, Machine Learning, and Geographic Information Systems. Linux enthusiast and admirer of the "open source" philosophy.} % To have no About Me section, just remove all the text and leave \aboutme{}
+
+%----------------------------------------------------------------------------------------
+%	 Interests
+%----------------------------------------------------------------------------------------
+
+\interest{Interests}{\textbullet\ Metacognition\\
+\textbullet\ Digital Photography\\
+\textbullet\ Film Photography\\
+\textbullet\ Videography\\
+\textbullet\ Gaming\\
+\textbullet\ Aviation\\
+\textbullet\ Motoring\\}
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+% Skill bar section, each skill must have a value between 0 an 5 (float)
+%\skills{{Python/4.5},{SQL/4.5},{Go/4},{PHP/4},{JavaScript/3.5},{Rust/3.5}}
+%------------------------------------------------
+
+% Skill text section, each skill must have a value between 0 an 5
+%\skillstext{}
+
+%----------------------------------------------------------------------------------------
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{twenty} % Environment for a list with descriptions
+
+    \twentyitemtime{mainblue}{white}{Feb/2025}{Present}{{\bfseries Intermediate Software Engineer}}{\textcolor{mainblue}{FINCH TECHNOLOGIES, Cape Town}}{\makeList{Developed and maintained a multi-tenant billing engine using BigQuery, SQL, Python, and Go to automate billing and reporting workflows.;Built a QuickBooks integration that converted billing outputs into invoices, reducing manual accounting effort.;Built and supported Meerkat, a Go-based ETL pipeline for delivering client data from BigQuery to AWS S3, with DynamoDB used for watermark and state tracking.;Maintained Fibre, a Rust-based ingestion pipeline for moving data from RDS SQL databases into BigQuery.;Managed AWS infrastructure with Terraform across S3, IAM, DynamoDB, RDS, and container registry resources, supporting development and production environments.;Deployed and operated containerised services using Docker, Kubernetes, and Helm.;Optimised production transaction extraction workflows, reducing runtime from roughly 8 hours to 2 hours through parallel processing, query optimisation, and improved batching.;Contributed to X-Finch, a transaction categorisation service, and to AI-based bank statement extraction through model evaluation, regex-based normalisation, and production monitoring.;Improved observability through Grafana dashboards and metrics enhancements, reducing time to detect and troubleshoot production issues.}}
+
+    \twentyitemtime{mainblue}{white}{Aug/2023}{Jan/2025}{{\bfseries Full Stack Software Developer}}{\textcolor{mainblue}{NAYAX OTI PETROSMART, Cape Town}}{\makeList{Built and maintained internal tooling and client-facing web applications using PHP and Python.;Developed ETL processes to ingest and process transaction and telemetry data from PDFs, Excel files, fixed-length text files, and APIs.;Developed and deployed an automated reporting system using MySQL, PHP, and cron, reducing manual data entry and improving reporting accuracy.;Helped transition legacy deployments to Dockerised containers and maintained containerised application environments, improving deployment speed, consistency, and reliability.}}
+
+    \twentyitemtime{mainblue}{mainblue}{May/2021}{Jul/2023}{{\bfseries Junior Software Engineer}}{\textcolor{mainblue}{BLOCKKOIN EXCHANGE LTD, Cape Town}}{\makeList{Developed client-facing web applications to support OTC crypto trading, including quoting workflows and competitor fee comparisons.;Integrated payment methods and CRM systems to support transaction flow and internal customer management processes.;Built financial tools in JavaScript, PHP, and Python to automate calculations and reduce manual reporting effort.;Supported Office 365 administration, user account management, and licence optimisation.;Assisted with mobile app deployments and contributed to UI improvements across customer-facing platforms.;Supported digital asset operations and vault balance reconciliation using Fireblocks in a regulated FSCA environment.}}
+    
+    \twentyitemtime{mainblue}{mainblue}{Dec/2018}{Feb/2019}{{\bfseries Engineering Intern}}{\textcolor{mainblue}{MOTT MACDONALD PDNA, Johannesburg}}{\makeList{Contributed to electrical infrastructure and lighting design for the Indian Ocean Games multi-sport complex in Mauritius using Relux Pro and AutoCAD.}}
+		%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+
+
+%----------------------------------------------------------------------------------------
+%	 PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+%\section{Publications}
+
+%\begin{twentyshort} % Environment for a short list with no descriptions
+%	\twentyitemshort{1865}{Chapter One, Down the Rabbit Hole.}
+%	\twentyitemshort{1865}{Chapter Two, The Pool of Tears.}
+%	\twentyitemshort{1865}{Chapter Three,  The Caucus Race and a Long Tale.}
+%	\twentyitemshort{1865}{Chapter Four,  The Rabbit Sends a Little Bill.}
+%	\twentyitemshort{1865}{Chapter Five,  Advice from a Caterpillar.}
+	%\twentyitemshort{<dates>}{<title/description>}
+%\end{twentyshort}
+
+
+
+%----------------------------------------------------------------------------------------
+%	 OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%----------------------------------------------------------------------------------------
+%	 INTERESTS
+%----------------------------------------------------------------------------------------
+
+%\section{Qualifications}
+
+%\begin{itemize}
+%    \item Proficiency in Linux systems: CentOS, Debian, Ubuntu, Elementary OS.
+%    \item Experience in Bash, Python, C++, R, Vim, Subversion, Git, OpenGL.
+%    \item Experience using Docker and Singularity.
+%    \item Experience in scrum, Jira, Jenkins.
+%    \item Experience in remote access, network management, system administration.
+%    \item Experience in math, statics, algorithms, solving problems, supervised machine learning problems.
+    
+%\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	 SECOND PAGE EXAMPLE
+%----------------------------------------------------------------------------------------
+\newpage
+\makesidebar
+\vspace{1cm}
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\newline 
+\newline 
+\begin{twenty} % Environment for a list with descriptions
+	\twentyactualitemtime{mainblue}{white}{Mar/2022}{Dec/2025}{BSc. Computer Science}{\textcolor{mainblue}{University of South Africa}}{\makeList{Notable Subjects: Database Design \& Implementation (Distinction), Advanced Systems Development (Distinction), Data Structures (Distinction), Techniques of Artificial Intelligence, and Computer Networks (Distinction).}}
+	\twentyactualitemtime{mainblue}{mainblue}{Dec/2020}{Dec/2021}{Diploma in Computing (L4DC)}{\textcolor{mainblue}{Academic Institute of Excellence}}{\makeList{Focus: Database Development, Software Development, Data Science,
+Machine Learning}}
+	\twentyactualitemtime{mainblue}{mainblue}{Mar/2017}{Dec/2019}{BSc.Eng Mechatronic Engineering (Partial)}{\textcolor{mainblue}{University of Cape Town}}{\makeList{Completed 120 Credits
+;Notable Subjects: Calculus, Computer Science,
+Statistics, Electrical Engineering, Project Management,
+Engineering Design and Physics}}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+\newline
+\newline
+\section{Community Service}
+\newline 
+\newline 
+\newline  
+\begin{twenty} % Environment for a short list with no descriptions
+{}{}
+     \twentyitem{Current}{Volunteer, Boorhaanol Islam Movement}{}{\makeList{Assisted with meal distribution and fundraising for underprivileged students.}}
+    \twentyitem{2017}{Member, Engineers Without Borders UCT}{}{\makeList{Conducted feasibility studies for Raspberry Pi-based IT infrastructure in under-served schools.}}
+
+\end{twenty}
+\newline
+\newline 
+\newline
+\subsection{\textcolor{mainblue}{References available upon request}}
+
+
+----------------------------------------------------------------------------------------
+%	 AWARDS
+%----------------------------------------------------------------------------------------
+
+
+%\section{Other information}
+
+%\subsection{References available upon request}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
